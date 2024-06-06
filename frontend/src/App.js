@@ -2,6 +2,7 @@
 import Annoucement from "./components/Annoucement";
 import Categories from "./components/Categories";
 import Navbar from "./components/Navbar";
+import Products from "./components/Products";
 import Slider from "./components/Slider";
 
 
@@ -13,6 +14,7 @@ function App() {
       <Slider/>
       <Categories />
        {/* <Home/> */}
+       <Products/>
     </div>
   );
 }
