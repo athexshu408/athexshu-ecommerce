@@ -1,4 +1,5 @@
 
+import { Add, Remove } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -66,7 +67,43 @@ padding: 5px;`
 const FilterSizeOption = styled.option``
 
 
+const AddContainer =  styled.div`
+display: flex;
+align-items: center;
+width: 50%;
+justify-content: space-between;
+`
 
+const AmountContainer =  styled.div`
+display: flex;
+align-items: center;
+font-weight: 700;
+`
+
+const Amount =  styled.span`
+width: 30px;
+height: 30px;
+border-radius: 10px;
+border: 1px solid teal;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 5px;
+`
+const Button =  styled.button`
+cursor: pointer;
+padding: 15px;
+border:2px solid teal;
+font-weight: 500;
+
+background-color: white;
+&:hover{
+    background-color:#f8f7f7a4
+}
+`
+
+
+// const AddContainer =  styled.div``
 
 
 const Product = () => {
@@ -103,6 +140,15 @@ const Product = () => {
                     </FilterSize>
                 </Filter>
             </FilterContainer>
+            <AddContainer>
+                 <AmountContainer>
+                    <Remove/>
+                    <Amount>1</Amount>
+                    <Add/>
+                 </AmountContainer>
+                    <Button>Add to cart</Button>
+
+            </AddContainer>
             </InfoContainer>
         </Wrapper>
 
