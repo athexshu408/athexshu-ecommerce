@@ -332,57 +332,57 @@ export const popularProduct = [
 
   {
     "id": 1,
-    "img": "https://img.freepik.com/free-photo/young-man-wearing-sunglasses-standing-grey-wall_171337-14979.jpg?size=626&ext=jpg&uid=R109772669&ga=GA1.1.790051073.1717656976&semt=ais_user"
+    "img": "https://i.ibb.co/K2WnNTq/kisspng-pop-art-retro-vintage-5d4056da0460f3-2669206415644976260179.png"
   },
   {
     "id": 2,
-    "img": "https://i.ibb.co/q0jj6qM/young-beautiful-woman-looking-camera-hat-trendy-girl-casual-summer-white-t-shirt-yellow-skirt-round.jpg"
+    "img": "https://i.ibb.co/P4r2QSn/transparent-casual-dress-yellow-dress-brown-dots-tie-waist-sho-yellow-dress-with-brown-dots-versatil.png"
   },
   {
     "id": 3,
-    "img": "https://i.ibb.co/yRGq9wj/sexy-luxury-woman-sunset.jpg"
+    "img": "https://i.ibb.co/Bt2JMyB/kisspng-paper-doll-clothing-stock-photography-professional-women-5a9e7bb30a1c09-13786351152033579504.png"
   },
   {
       "id": 4,
       "title": "Casual T-Shirt",
       "category": "T-Shirts",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/ngTJFX6/file-1.png"
     },
     {
       "id": 5,
       "title": "Formal Blazer",
       "category": "Blazers",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/YbY46fH/file-3.png"
     },
     {
       "id": 6,
       "title": "Denim Jeans",
       "category": "Jeans",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/0YNWM27/kisspng-t-shirt-sleeve-a-k-o-o-clothing-5b9d037bcb03c3-2997520615370166998316.png"
     },
     {
       "id": 7,
       "title": "Summer Shorts",
       "category": "Shorts",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/7bRy6Sf/transparent-gold-ring-elegant-gold-ring-with-intricate-leaf-design66211290ef77e4-81671749.png"
     },
     {
       "id": 8,
       "title": "Athletic Wear",
       "category": "Sportswear",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/FnCv6xG/kisspng-earring-necklace-jewellery-clip-art-gold-chain-5abeb1fb774929-2740995315224468434886.png"
     },
     {
       "id": 9,
       "title": "Winter Jacket",
       "category": "Jackets",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/TkwyrNT/transparent-black-dial-watch-date-display-watch-simple-design-stainless-steel-watch-with-black-dial6.png"
     },
     {
       "id": 10,
       "title": "Office Skirt",
       "category": "Skirts",
-      "img": "https://i.ibb.co/SwJ5m26/full-length-portrait-cheerful-attractive-woman-holding-shopping-bag-isolated-white-wall.png"
+      "img": "https://i.ibb.co/pJHHy1n/5a20c9d49c08f3-1790932115120982606391.png"
     },
 ]
 
