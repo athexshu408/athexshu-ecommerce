@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -12,6 +13,7 @@ const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/order");
+const stripeRoutes = require("./routes/stripe");
 
 
 
@@ -23,6 +25,7 @@ mongoose
   });
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/api/test", () => {
   console.log("success");
@@ -32,6 +35,9 @@ app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/checkout",stripeRoutes);
+
+
 
 app.use("/api/cart", cartRoutes);
 
