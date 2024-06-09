@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { publicRequest } from "../components/requestMethod";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
+
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -111,12 +114,13 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState();
   const [size, setSize] = useState();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get("/products/find/" + id);
-        quantity > 1 && setProduct(res.data);
+         setProduct(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -126,14 +130,19 @@ const Product = () => {
 
   const handleQuantity = (type) => {
     if (type === "dec") {
-      setQuantity(quantity - 1);
+      quantity > 1 && setQuantity(quantity - 1);
     } else {
       setQuantity(quantity + 1);
     }
   };
 
   const handleClick =()=>{
-    console.log("clicked")
+    dispatch(
+
+      
+      addProduct({...product, quantity ,color,size})
+      );
+
   }
   return (
     <Container>
