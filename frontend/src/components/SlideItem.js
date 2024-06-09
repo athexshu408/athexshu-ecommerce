@@ -41,7 +41,7 @@ export const CategoriesDAta =
     "title": "Elegant Lingerie",
     "category": "Lingerie",
     "img": "https://i.ibb.co/yRGq9wj/sexy-luxury-woman-sunset.jpg"
-  },
+  }
   // {
   //   "id": 4,
   //   "title": "Casual T-Shirt",

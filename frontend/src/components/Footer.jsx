@@ -122,7 +122,7 @@ const Footer = () => {
         <ContactItem><MailOutline style={{marginRight:"10px"}}/>
             contact@athexshu.in
         </ContactItem>
-        <Payment Src="https://i.ibb.co/4fGJsJ1/25654-2-major-credit-card-logo-transparent.png"/>
+        <Payment src="https://i.ibb.co/4fGJsJ1/25654-2-major-credit-card-logo-transparent.png"/>
           
       </Right>
     </Container>

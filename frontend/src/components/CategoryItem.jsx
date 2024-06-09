@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 const  Container = styled.div`
@@ -40,13 +41,17 @@ const Button = styled.button`
  font-weight: 600;
 `
 const CategoryItem = ({item}) => {
+
+ 
   return (
     <Container>
+      <Link to={`/products/${item.category}`}>
         <Image src={item.img}/>
         <Info >
             <Title>{item.title}</Title>
             <Button>SHOP NOW</Button>
         </Info>
+      </Link>
     </Container>
   )
 }
