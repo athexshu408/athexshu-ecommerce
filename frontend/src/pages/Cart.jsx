@@ -149,6 +149,7 @@ const Button = styled.button`
   color: white;
   padding: 10px;
   font-weight: 600;
+  cursor: pointer;
 `;
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -170,10 +171,12 @@ const Cart = () => {
 
            
         });
-        navigate("/success",{
-          stripeData: res.data,
-          products: cart, });
-        console.log(res.data)
+        navigate("/success", {
+          state: {
+            stripeData: res.data,
+            products: cart,
+          },})
+        
       } catch (err) {
         console.log(err);
       }
@@ -196,9 +199,9 @@ const Cart = () => {
         <Bottom>
           <Info>
             {cart?.products?.map((product) => (
-              <Product>
-                <ProductDetail>
-                  <Image src={product.img} />
+              <Product >
+                <ProductDetail >
+                  <Image src={product?.img} />
                   <Details>
                     <ProductName>
                       <b>Product:</b>
@@ -217,9 +220,9 @@ const Cart = () => {
                 </ProductDetail>
                 <PriceDetail>
                   <ProductAmountContainer>
-                    <Add />
+                    <Add   style={{cursor:"pointer"}} />
                     <ProductAmount>{product.quantity}</ProductAmount>
-                    <Remove />
+                    <Remove style={{cursor:"pointer"}} />
                   </ProductAmountContainer>
                   <ProductPrice>
                     {product.price * product.quantity}
@@ -232,19 +235,19 @@ const Cart = () => {
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
-              <summaryItemText>Subtotal</summaryItemText>
+              <SummaryItemText>Subtotal</SummaryItemText>
               <SummaryItemPrice>${cart.total}</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
-              <summaryItemText>Estimated Shiping</summaryItemText>
+              <SummaryItemText>Estimated Shiping</SummaryItemText>
               <SummaryItemPrice>$20</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
-              <summaryItemText>Shipping Discount</summaryItemText>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
               <SummaryItemPrice>$ -5.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
-              <summaryItemText>Total</summaryItemText>
+              <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>${cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout

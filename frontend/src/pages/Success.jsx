@@ -9,10 +9,14 @@ const Success = () => {
   const location = useLocation();
   //in Cart.jsx I sent data and cart. Please check that page for the changes.(in video it's only data)
   const data = location.state?.stripeData;
-  const cart = location.state?.cart;
+  const cart = location.state?.products;
   const currentUser = useSelector((state) => state.user?.currentUser);
   const [orderId, setOrderId] = useState(null);
 
+
+
+console.log("amount:" + cart.total);
+ console.log(" address: " +JSON.stringify(data.billing_details.address, null, 2) ,)
   useEffect(() => {
     const createOrder = async () => {
       try {
@@ -20,7 +24,8 @@ const Success = () => {
           userId: currentUser._id,
           products: cart.products.map((item) => ({
             productId: item._id,
-            quantity: item._quantity,
+            quantity: item.quantity,
+            
           })),
           amount: cart.total,
           address: data.billing_details.address,
@@ -28,9 +33,13 @@ const Success = () => {
         setOrderId(res.data._id);
       } catch {}
     };
-    data && createOrder();
+    if (data && cart && currentUser) {
+      createOrder();
+    }
   }, [cart, data, currentUser]);
 
+
+  
   return (
     <div
       style={{
